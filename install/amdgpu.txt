@@ -1,0 +1,25 @@
+Install AMD GPU.
+1. Download AMD GPU sesuai dengan sistem operasi dan type gpu yang dipakai misal
+   os : ubuntu 16.04 64bit
+   gpu : Radeon HD 8670A/8670M/8690M / R5 M330 / M430 / R7 M520
+   download di : https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.40-492261.tar.xz
+
+2. Ekstrak hasil download dan masuk ke direktori 'amdgpu-pro-17.40-492261'.
+
+3. Install amdgpu dengan mengetikan perintah sbb :
+   ./amdgpu-pro-install –-px
+    sudo reboot
+4. Selesai
+
+Uninstall AMD GPU 
+1. Ketik perintah sebagai berikut :
+   amdgpu-pro-uninstall
+2. Selesai
+
+Installing the Optional ROCm Component
+This AMDGPU-Pro driver package incorporates the ROCm component that can be optionally installed for running Compute/OpenCL applications.  You can install the component by issuing the following command:
+
+sudo apt install -y rocm-amdgpu-pro
+
+Referensi :
+https://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Install.aspx
