@@ -1,0 +1,11 @@
+Daftar driver yang belum terinstall dapat dilihat di :
+System settings >> Software & updates >> additional drivers.
+
+atau bisa juga lewat Terminal :
+
+sudo lshw -html > hardware.html
+buka hardware.html dengan browser, yang merah artinya belum aktif (driver blm aktif)
+
+atau install hardware info :
+
+sudo apt-get install hardinfo
