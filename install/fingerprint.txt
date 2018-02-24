@@ -1,0 +1,25 @@
+Dua langkah install Fingerprint Scanner di Ubuntu 16.04 LTS atau yang lebih tinggi. Tested menggunakan Lenovo Ideapad v310
+
+sudo apt install libpam-fprintd
+fprintd-enroll
+
+
+Alternative: Fingerprint GUI
+
+~$ sudo apt install libpam-fprintd
+
+Scan sidik jari Anda
+~$ fprintd-enroll
+Using device /net/reactivated/Fprint/Device/0
+Enrolling right-index-finger finger.
+Enroll result: enroll-stage-passed
+Enroll result: enroll-completed
+
+Sekarang Anda sudah bisa menggunakannya
+
+~$ sudo apt-get update
+Swipe your finger across the fingerprint reader
+Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Hit:2 http://sg.archive.ubuntu.com/ubuntu xenial InRelease
+Hit:3 http://ppa.launchpad.net/fingerprint/fingerprint-gui/ubuntu xenial InRelease
+
