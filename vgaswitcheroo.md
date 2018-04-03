@@ -1,26 +1,34 @@
-pengenalan
-Versi terbaru dari kernel Linux dapat mendukung grafis hibrida. Jika perangkat Anda memiliki pemilih perangkat keras, Anda dapat beralih dari satu GPU ke GPU lainnya melalui bendera vga_switcheroo .
+# Hybrid Graphics
+
+## Pendahuluan
+
+Beberapa laptop dilengkapi dengan dua kartu grafis: satu untuk digunakan dalam aplikasi yang membutuhkan banyak daya komputasi seperti game, yang disebut _discrete GPU_ , dan yang kurang kuat, tetapi menghemat energi, yang disebut _integrated GPU_. _Integrated GPU_ sering ditanamkan pada CPU. Konsep ini disebut Hybrid Graphics.
+
+Versi terbaru dari kernel Linux dapat mendukung grafis hibrida. Jika perangkat Anda memiliki pemilih perangkat keras, Anda dapat beralih dari satu GPU ke GPU lainnya melalui bendera **vga_switcheroo** .
 
 
+> Metode ini tidak didukung oleh semua mesin dan hanya berfungsi jika Anda menggunakan driver open source ( [Nouveau](https://wiki.ubuntu-it.org/Hardware/Video/Nvidia/DriverNouveau) , [Radeon](https://wiki.ubuntu-it.org/Hardware/Video/Amd/Radeon) ) .
 
-Metode ini tidak didukung oleh semua mesin dan hanya berfungsi jika Anda menggunakan driver open source ( Nouveau , Radeon ) .
+## Mengaktifkan vga_switcheroo
+Untuk memverifikasi bahwa kernel dikompilasi dengan opsi yang benar, Anda dapat memeriksa file `config-*` di direktori `/boot` . Ketik terminal :
 
-Mengaktifkan vga_switcheroo
-Untuk memverifikasi bahwa kernel dikompilasi dengan opsi yang benar, Anda dapat memeriksa file config- * di direktori / boot . Ketik terminal :
+`grep -i switcheroo/boot/config-*` 
 
-grep -i switcheroo/boot/config- * 
-Mekanisme vga_switcheroo hanya akan aktif ketika kernel dimulai dengan opsi:
+Mekanisme **vga_switcheroo** hanya akan aktif ketika kernel dimulai dengan opsi:
 
-"modeset = 1"
+`"modeset = 1"`
+
 dan / atau dengan opsi:
 
-"Nomodeset"
+`"Nomodeset"`
+
 absen.
 
-Untuk memeriksa apakah vga_switcheroo diaktifkan, cari file switch dengan mengetik:
+Untuk memeriksa apakah **vga_switcheroo** diaktifkan, cari file `switch` dengan mengetik:
 
-sudo ls -l /sys/kernel/debug/vgaswitcheroo/switch
-jika file ditemukan maka vga_switcheroo diaktifkan.
+`sudo ls -l /sys/kernel/debug/vgaswitcheroo/switch`
+
+jika file ditemukan maka **vga_switcheroo** diaktifkan.
 
 Penggunaan vga_switcheroo
 Setelah Anda memastikan vga_switcheroo tersedia, Anda dapat menggunakan opsi ini untuk mengubah GPU:
