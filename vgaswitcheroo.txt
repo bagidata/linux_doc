@@ -8,7 +8,7 @@ Metode ini tidak didukung oleh semua mesin dan hanya berfungsi jika Anda menggun
 Mengaktifkan vga_switcheroo
 Untuk memverifikasi bahwa kernel dikompilasi dengan opsi yang benar, Anda dapat memeriksa file config- * di direktori / boot . Ketik terminal :
 
-grep -i switcheroo / boot / config- * 
+grep -i switcheroo/boot/config- * 
 Mekanisme vga_switcheroo hanya akan aktif ketika kernel dimulai dengan opsi:
 
 "modeset = 1"
@@ -19,7 +19,7 @@ absen.
 
 Untuk memeriksa apakah vga_switcheroo diaktifkan, cari file switch dengan mengetik:
 
-sudo ls -l / sys / kernel / debug / vgaswitcheroo / switch 
+sudo ls -l /sys/kernel/debug/vgaswitcheroo/switch
 jika file ditemukan maka vga_switcheroo diaktifkan.
 
 Penggunaan vga_switcheroo
@@ -27,28 +27,28 @@ Setelah Anda memastikan vga_switcheroo tersedia, Anda dapat menggunakan opsi ini
 
 Untuk mengaktifkan GPU yang terputus (tetapi bukan output switching):
 
-echo ON> / sys / kernel / debug / vgaswitcheroo / switch 
+echo ON> /sys/kernel/debug/vgaswitcheroo/switch
 Untuk menghubungkan kartu grafis terintegrasi dengan output:
 
-echo IGD> / sys / kernel / debug / vgaswitcheroo / switch 
+echo IGD> /sys/kernel/debug/vgaswitcheroo/switch 
 Untuk menghubungkan kartu grafis khusus dengan output:
 
-echo DIS> / sys / kernel / debug / vgaswitcheroo / switch 
+echo DIS> /sys/kernel/debug/vgaswitcheroo/switch
 Untuk menonaktifkan kartu grafis yang saat ini terputus:
 
-echo OFF> / sys / kernel / debug / vgaswitcheroo / switch 
+echo OFF> /sys/kernel/debug/vgaswitcheroo/switch 
 Ada juga opsi tambahan yang berguna dalam sesi X-Windows:
 
 Untuk menambahkan switch ke grafis terintegrasi yang terjadi ketika server X di sebelah reboot:
 
-gema DIGD> / sys / kernel / debug / vgaswitcheroo / switch 
+gema DIGD> /sys/kernel/debug/vgaswitcheroo/switch 
 Untuk menambahkan bagian ke grafik khusus yang terjadi ketika server X di sebelah reboot:
 
-echo DDIS> / sys / kernel / debug / vgaswitcheroo / switch 
+echo DDIS> /sys/kernel/debug/vgaswitcheroo/switch 
 Pantau pengaturan
 Anda dapat memeriksa pengaturan yang saat ini digunakan melalui perintah:
 
-kucing / sys / kernel / debug / vgaswitcheroo / switch
+gedit /sys/kernel/debug/vgaswitcheroo/switch
 yang dapat mengembalikan output seperti ini:
 
 0: IGD: +: Pwr: 0000: 01: 05,0
@@ -355,3 +355,5 @@ untuk / dev / fb1 .
 
 
 Sebagai alternatif, jika Anda ingin membuat GPU dinonaktifkan kapan saja, Anda dapat membuat daftar hitam driver yang relevan, memperbarui initramfs dan kemudian menyingkirkan salah satu perangkat fb.
+
+Sumber : https://wiki.ubuntu-it.org/Hardware/Video/GraficaIbrida/Vga_switcheroo
