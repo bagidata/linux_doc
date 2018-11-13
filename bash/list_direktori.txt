@@ -1,0 +1,14 @@
+List direktori sekaligus melihat disk usage.
+
+`$du`
+
+`du [OPTION]... [FILE] [directory]...`
+
+`du [OPTION]... --files0-from=F`
+
+Melihat dengan satuan Kilobyte :
+`$ du -k /nama_folder`
+
+Melihat dengan satuan Megabyte :
+`$ du -m /nama_folder`
+
