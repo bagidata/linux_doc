@@ -38,12 +38,3 @@ Pada perintah di atas akan mengambil aplikasi yang mengandung kata `gimp` `cups`
 `sudo dpkg -i *.deb`
 
 
-## Cara lain untuk Repacking aplikasi ubuntu
-
-Install `dpkg-repack`
-
-`sudo apt-get install dpkg-repack`
-
-Repacking
-
-`sudo dpkg-repack <package>`
