@@ -1,3 +1,16 @@
+Ubuntu membedakan antara perangkat lunak yang "gratis" dan perangkat lunak yang tidak gratis.
+
+pada repositori ubuntu dibagi menjadi Empat repositori utama yaitu:
+
+**main** - perangkat lunak bebas dan sumber terbuka yang didukung Canonical.
+
+**Universe** - Perangkat lunak bebas dan sumber terbuka yang dikelola komunitas.
+
+**Restricted** - driver eksklusif untuk perangkat.
+
+**Multiverse** - Perangkat lunak dibatasi oleh masalah hak cipta atau hukum.
+
+
 Daftar kumpulan repository Ubuntu LTS 16.04 Xenial Xerus :
 
 Repository via ITB
