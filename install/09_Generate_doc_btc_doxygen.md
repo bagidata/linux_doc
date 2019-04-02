@@ -24,7 +24,7 @@ sudo apt install graphviz
 
 ### Generate src bitcoin
 
-Buat direkroti `doxygen` di `/doc/doxygen`
+Buat direkroti `doxygen` di `/doc/doxygen` atau biarkan otomatis dibuat.
 
 Kerjakan perintah berikut :
 ```
