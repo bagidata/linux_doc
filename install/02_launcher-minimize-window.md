@@ -1,4 +1,4 @@
-##Klik Icon untuk maksimal dan mininal windows di ubuntu
+### Klik Icon untuk maksimal dan mininal windows di ubuntu
 
 ketik :
 
