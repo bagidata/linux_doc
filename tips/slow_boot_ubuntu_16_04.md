@@ -42,6 +42,31 @@ $ systemd-analyze plot >bootup.svg
 $ eog bootup.svg&
 ```
 
+### service
+
+### Cek status service
+
+```
+sudo systemctl status nama.service
+```
+
+#### Start / Enable service
+
+```
+sudo systemctl start nama.service
+```
+#### Stop and restart service
+
+```
+sudo systemctl stop nama.service
+sudo systemctl restart nama.service
+```
+
+#### Enable service start system boot
+
+```
+sudo systemctl enable nama.service
+```
 
 ### Menghapus service yang tidak perlu
 
